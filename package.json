@@ -1,0 +1,26 @@
+{
+  "name": "discours-welcome",
+  "version": "1.0.0",
+  "description": "Central repository for all discours-related development",
+  "scripts": {
+    "docs": "for f in docs/diagrams/*.puml; do puml generate $f -o \"$f.png\"; done"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+"
+  },
+  "keywords": [
+    "discours",
+    "discours.io",
+    "open source development"
+  ],
+  "author": "goooseman",
+  "license": "GNU GPLv3",
+  "bugs": {
+    "url": "https://github.com/Discours/discours-welcome/issues"
+  },
+  "homepage": "https://github.com/Discours/discours-welcome/#readme",
+  "devDependencies": {
+    "node-plantuml": "^0.8.1"
+  }
+}

@@ -1,0 +1,51 @@
+@startuml
+!include <tupadr3/common>
+!include <tupadr3/font-awesome/server>
+!include <tupadr3/font-awesome/internet_explorer>
+!include <tupadr3/font-awesome/database>
+!include <tupadr3/font-awesome/user>
+title Discours.io
+actor User
+'Colors: https://materialuicolors.co/
+FA_INTERNET_EXPLORER(frontend,Frontend\n\nTypescript\nReact.js\nSSR\nApollo) #FF9800
+FA_SERVER(backend, Backend\n\nHasuro) #FF9800
+
+FA_USER(auth0, Auth0) #FF9800
+
+FA_DATABASE(maindb,Main DB\n\nPostgreSQL,database) #FF9800
+FA_DATABASE(searchdb,Search DB\n\nElasticsearch,database) #FF9800
+
+FA_SERVER(images_service, Images Microservice\n\nThumbor) #FF9800
+FA_SERVER(search_service, Search Microservice\n\nJava\nElasticsearch) #FF9800
+FA_SERVER(rss_service, RSS Microservice\n\nPython) #FF9800
+FA_SERVER(telegram_service, Telegram Microservice\n\nGo) #FF9800
+FA_SERVER(social_image_service, Social Image Microservice\n\nPython\nPillow) #FF9800
+
+FA_SERVER(recommendations_service, Recommendations\nMicroservice\n\n?) #FF5722
+
+rss_service<-User: RSS
+telegram_service->User: Telegram
+frontend<-User: Browser
+
+rss_service-->backend: GraphQL
+telegram_service<--backend: HTTP REST
+
+backend<->frontend: GraphQL
+
+images_service<--frontend: HTTP
+
+backend<--->maindb
+backend<--->auth0
+backend-->search_service: HTTP REST
+search_service<--->searchdb
+backend-->social_image_service: HTTP REST
+
+legend right
+|= |= Type |
+|<back:#8BC34A>   </back>| Ready |
+|<back:#FFEB3B>   </back>| Improvements are needed |
+|<back:#FF9800>   </back>| Not Ready |
+|<back:#FF5722>   </back>| Not started |
+endlegend 
+
+@enduml
