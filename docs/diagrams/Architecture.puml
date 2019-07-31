@@ -22,6 +22,8 @@ FA_SERVER(telegram_service, Telegram Microservice\n\nGo) #FF9800
 FA_SERVER(social_image_service, Social Image Microservice\n\nPython\nPillow) #FF9800
 
 FA_SERVER(recommendations_service, Recommendations\nMicroservice\n\n?) #FF5722
+FA_SERVER(donate_service, Donate\nMicroservice\n\n?) #FF5722
+
 
 rss_service<-User: RSS
 telegram_service->User: Telegram
@@ -33,9 +35,12 @@ telegram_service<--backend: HTTP REST
 backend<->frontend: GraphQL
 
 images_service<--frontend: HTTP
+donate_service<--frontend: GraphQL
+recommendations_service<--frontend: GraphQL
 
 backend<--->maindb
 backend<--->auth0
+backend--->donate_service: GraphQL
 backend-->search_service: HTTP REST
 search_service<--->searchdb
 backend-->social_image_service: HTTP REST

@@ -31,4 +31,5 @@
 [discours-microservice-rss]() | Python | При получении запроса идет на основной бэкэнд за данными и формирует xml файл в формате RSS. | Ожидает переноса в open source
 [discours-microservice-telegram]() | Go | Получает от бэкэнда новые статьи и отправляет подписчикам в Telegram | Ожидает переноса в open source
 [discours-microservice-social-image]() | Python / Pillow | Генерирует для бэкэнда изображение, которое будет вставлено в страницу статьи как og:image. В дальнейшем планируется расширение сервиса для генерирования изображения из комментария. | Ожидает переноса в open source
+[discours-microservice-donate]() | ? | Микросервис, хранящий всю информацию по пожертвованиям. Имеет интеграцию с [Яндекс.Кассой](https://kassa.yandex.ru/developers/api) (для снятия legacy платежей, полученных до мая 2019) и [Cloudpayments](https://developers.cloudpayments.ru) | Не начат
 [discours-microservice-recommendations]() | ? | На основе куки пользователя + информации о логине генерирует 3 рекоммендуемых статьи к определенной статье | Не начат
