@@ -1,5 +1,7 @@
 # Разработка проекта Дискурс
 
+[![Join the chat at https://gitter.im/Discours/discours-welcome](https://badges.gitter.im/Discours/discours-welcome.svg)](https://gitter.im/Discours/discours-welcome?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 > [Дискурс](https://discours.io) является проектом с открытым исходным кодом и каждый желающий может поучавствовать в его разработке.
 
 ### Манифест разработки Дискурса
