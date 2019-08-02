@@ -3,7 +3,10 @@
   "version": "1.0.0",
   "description": "Central repository for all discours-related development",
   "scripts": {
-    "docs": "for f in docs/diagrams/*.puml; do puml generate $f -o \"$f.png\"; done"
+    "docs:diagrams": "for f in docs/diagrams/*.puml; do puml generate $f -o \"$f.png\"; done",
+    "docs:readme": "gitdown ./docs/.cache/README.md --output-file ./README.md",
+    "predocs:readme": "hercule ./docs/_README.md -o ./docs/.cache/README.md",
+    "docs": "npm run docs:diagrams && npm run docs:readme"
   },
   "repository": {
     "type": "git",
@@ -21,6 +24,8 @@
   },
   "homepage": "https://github.com/Discours/discours-welcome/#readme",
   "devDependencies": {
+    "gitdown": "^3.1.1",
+    "hercule": "^4.1.1",
     "node-plantuml": "^0.8.1"
   }
 }
