@@ -4,8 +4,8 @@
   "description": "Central repository for all discours-related development",
   "scripts": {
     "docs:diagrams": "for f in docs/diagrams/*.puml; do puml generate $f -o \"$f.png\"; done",
-    "docs:readme": "gitdown ./docs/.cache/README.md --output-file ./README.md",
-    "predocs:readme": "hercule ./docs/_README.md -o ./docs/.cache/README.md",
+    "docs:readme": "gitdown ./docs/.README.tmp --output-file ./README.md",
+    "predocs:readme": "hercule ./docs/_README.md -o ./docs/.README.tmp",
     "docs": "npm run docs:diagrams && npm run docs:readme"
   },
   "repository": {
