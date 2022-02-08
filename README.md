@@ -4,8 +4,6 @@
 <a name=""></a>
 # Разработка проекта Дискурс
 
-[![Gitter](https://badges.gitter.im/Discours/community.svg)](https://gitter.im/Discours/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 > [Дискурс](https://discours.io) — проект с открытым исходным кодом и каждый желающий может поучаствовать в его разработке.
 
 * [Разработка проекта Дискурс](#)
