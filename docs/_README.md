@@ -3,8 +3,6 @@
 
 # Разработка проекта Дискурс
 
-[![Gitter](https://badges.gitter.im/Discours/community.svg)](https://gitter.im/Discours/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-
 > [Дискурс](https://discours.io) является проектом с открытым исходным кодом и каждый желающий может поучаствовать в его разработке.
 
 {"gitdown": "contents", "maxLevel": 3}
